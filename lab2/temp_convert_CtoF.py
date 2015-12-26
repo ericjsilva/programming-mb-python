@@ -10,7 +10,7 @@ while continueYN.upper() == "Y":
     # get temperature input from the user, and prompt them for what we expect
     degF = int(raw_input("Enter temperature in degrees Fahrenheit (°C) to convert: "))
 
-    # TODO: Convert C to F
+    # TODO: Convert C to F (Formula: °F = °C * 9/5 + 32)
 
     # TODO: Print the results
 
