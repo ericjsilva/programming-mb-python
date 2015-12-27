@@ -3,6 +3,10 @@
 
 """temp_convert.py: Convert temperature C to F."""
 
+
+def convert_C_to_F(temp):
+    # TODO: create conversion logic
+
 # initialize looping variable, assume yes as first answer
 continueYN = "Y"
 
@@ -11,6 +15,7 @@ while continueYN.upper() == "Y":
     degF = int(raw_input("Enter temperature in degrees Fahrenheit (°C) to convert: "))
 
     # TODO: Convert C to F (Formula: °F = °C * 9/5 + 32)
+    # Call convert_C_to_F function
 
     # TODO: Print the results
 
