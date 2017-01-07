@@ -73,7 +73,7 @@ def initialize_stars():
 
         steps = random.randint(0, WINCENTER[X_COORD])
 
-        print " vel = %s, pos = %s, steps = %d" % (vel, pos, steps)
+        #print " vel = %s, pos = %s, steps = %d" % (vel, pos, steps)
 
         pos[X_COORD] = pos[X_COORD] + (vel[X_COORD] * steps)
         pos[Y_COORD] = pos[Y_COORD] + (vel[Y_COORD] * steps)
@@ -193,7 +193,7 @@ def draw_stars(surface, stars, color):
         if example == 2:
             if color != BLACK:
                 color = getRandomColor()
-            draw_single_star(surface, pos, color)
+        draw_single_star(surface, pos, color)
 
         # random color stars & super nova stars
         if example == 3:
