@@ -12,7 +12,7 @@ while continueYN.upper() == "Y":
 
     degC = (degF - 32) * 5/9
 
-    print "Temperature in degrees C is: {0}".format(degC)
+    print "Temperature in degrees C is: {temp}".format(temp=degC)
 
     # check for temperature below freezing...
     if degC < 0:
