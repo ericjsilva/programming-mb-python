@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 """hangman.py: Let's play a game of hangman."""
@@ -7,16 +7,14 @@
 import time, random
 
 # welcoming the user
-name = raw_input("What is your name? ")
+name = input("What is your name? ")
 
-print "Hello, " + name, "Time to play hangman!"
-
-print "\n"
+print(f"Hello {name}, Time to play hangman!\n")
 
 # wait for 1 second
 time.sleep(1)
 
-print "Start guessing..."
+print("Start guessing...")
 time.sleep(0.5)
 
 # here we set the secret
@@ -26,7 +24,7 @@ words = ["knowledge", "character", "citizenship", "programming", "skywalker"]
 word = random.choice(words)
 
 # creates an variable with an empty value
-guesses = ''
+guesses = ""
 
 # determine the number of turns
 turns = 10
@@ -45,49 +43,44 @@ while turns > 0:
 
     # see if the character is in the players guess
         if char in guesses:
-
-        # print then out the character
-            print char,
-
+            # print then out the character
+            print(f"{char}", end=" ")
         else:
+            # if not found, print a dash
+            print("_", end=" ")
 
-        # if not found, print a dash
-            print "_",
-
-        # and increase the failed counter with one
+            # and increase the failed counter with one
             failed += 1
 
     # if failed is equal to zero
 
     # print You Won
     if failed == 0:
-        print "\nYou won"
+        print("\nYou won!")
 
-    # exit the script
+        # exit the script
         break
 
-    print
-
     # ask the user go guess a character
-    guess = raw_input("Guess a character: ").upper()
+    guess = input("\nGuess a character: ").upper()
 
     # set the players guess to guesses
     guesses += guess
 
     # if the guess is not found in the secret word
-    if guess not in word:
+    if guess not in word.upper():
 
-     # turns counter decreases with 1 (now 9)
+        # turns counter decreases with 1 (now 9)
         turns -= 1
 
-    # print wrong
-        print "Wrong\n"
+        # print incorrect guess
+        print(f"Sorry there is no {guess}.\n")
 
-    # how many turns are left
-        print "You have", + turns, 'more guesses'
+        # how many turns are left
+        print(f"You have {turns} more guesses...")
 
-    # if the turns are equal to zero
+        # if the turns are equal to zero
         if turns == 0:
 
-        # print "You Loose"
-            print "You Loose\n"
+        # print "You did not guess the word. Better luck next time."
+            print("You did not guess the word. Better luck next time.\n")

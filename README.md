@@ -39,10 +39,10 @@ Teaches basic concepts of:
 programming-mb-python is an open source project and your contribution is very much appreciated.
 
 1. Check for open issues or open a fresh issue to start a discussion around a feature idea or a bug.
-2. Fork the repository on Github and make your changes on the `master` branch (or branch off of it).   
+2. Fork the repository on Github and make your changes on the `main` branch (or branch off of it).   
 3. Add new examples/labs to a new subfolder/directory.
 4. Add overview of new examples/labs to this README.md (if applicable).
-5. Send a pull request (with the `master` branch as the target).
+5. Send a pull request (with the `main` branch as the target).
 
 A big thank you goes out to everyone who helped with the project, the [contributors](https://github.com/ericjsilva/programming-mb-python/graphs/contributors)
 and everyone who took the time to report issues and give feedback.

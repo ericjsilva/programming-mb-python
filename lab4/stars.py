@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 """A simple starfield example. Note you can move the 'center' of
 the starfield by leftclicking in the window. This example show
@@ -26,7 +26,7 @@ def init_star():
     """
     creates a new star
 
-       each star has a 
+       each star has a
         - starting point
         - a velocity
         - a direction
@@ -38,7 +38,7 @@ def init_star():
 
     dir = random.randrange(100000)
 
-    # get a random number between 0 and 1   
+    # get a random number between 0 and 1
     velocity = random.random()
 
     if example == 1:
@@ -56,10 +56,9 @@ def init_star():
 
 
 def initialize_stars():
-    #########################    
+    #########################
     # creates a new starfield
     #########################
-
 
     # TODO
     num_stars = 1
@@ -73,13 +72,13 @@ def initialize_stars():
 
         steps = random.randint(0, WINCENTER[X_COORD])
 
-        #print " vel = %s, pos = %s, steps = %d" % (vel, pos, steps)
+        # print " vel = %s, pos = %s, steps = %d" % (vel, pos, steps)
 
         pos[X_COORD] = pos[X_COORD] + (vel[X_COORD] * steps)
         pos[Y_COORD] = pos[Y_COORD] + (vel[Y_COORD] * steps)
 
-        vel[X_COORD] = vel[X_COORD] * (steps * .09)
-        vel[Y_COORD] = vel[Y_COORD] * (steps * .09)
+        vel[X_COORD] = vel[X_COORD] * (steps * 0.09)
+        vel[Y_COORD] = vel[Y_COORD] * (steps * 0.09)
 
         stars.append(star)
 
@@ -96,7 +95,7 @@ def getRandomColor():
 
 
 def draw_nova_star(surface, pos):
-    """ Draw a super nova star """
+    """Draw a super nova star"""
 
     color = getRandomColor()
     for xy in range(0, 10):
@@ -140,8 +139,8 @@ def draw_nova_star(surface, pos):
 
 
 def draw_single_star(surface, pos, color):
-    """ 
-    Draw a single start. 
+    """
+    Draw a single start.
 
     Choose between small and large stars
     """
@@ -225,8 +224,9 @@ def move_stars(stars):
         pos[X_COORD] = pos[X_COORD] + vel[X_COORD]
         pos[Y_COORD] = pos[Y_COORD] + vel[Y_COORD]
 
-        if (pos[X_COORD] >= 0 and pos[X_COORD] <= WINSIZE[X_COORD]) and \
-                (0 <= pos[Y_COORD] <= WINSIZE[Y_COORD]):
+        if (pos[X_COORD] >= 0 and pos[X_COORD] <= WINSIZE[X_COORD]) and (
+            0 <= pos[Y_COORD] <= WINSIZE[Y_COORD]
+        ):
 
             vel[X_COORD] = vel[X_COORD] * accel
             vel[Y_COORD] = vel[Y_COORD] * accel
@@ -245,7 +245,7 @@ def main():
     # initialize and prepare screen
     pygame.init()
     screen = pygame.display.set_mode(WINSIZE)
-    pygame.display.set_caption('pygame Stars Example')
+    pygame.display.set_caption("pygame Stars Example")
     screen.fill(BLACK)
 
     # main game loop
@@ -270,5 +270,5 @@ def main():
 
 
 # if python says run, then we should run
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
